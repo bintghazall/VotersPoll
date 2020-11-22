@@ -1,0 +1,89 @@
+function vote(){
+    var A = []; 
+    var B = []; 
+    var C = []; 
+    var D = []; 
+    var selection = document.getElementById('Chairman').value;
+    
+    //var selection = chairman.options[chairman.selectedIndex].value;  
+
+    if (selection=='candidateA'){
+      A.push(parseInt(n.value))
+    }else if (selection=='candidateB'){
+      B.push(parseInt(n.value))
+    }else if (selection=='candidateC'){
+      C.push(parseInt(n.value))
+    }else if (selection=='candidateD'){
+      D.push(parseInt(n.value))
+    }
+    //pushing into localstorage
+    localStorage.setItem("a1", JSON.stringify(A) );
+    localStorage.setItem("b1", JSON.stringify(B) );
+    localStorage.setItem("c1", JSON.stringify(C) );
+    localStorage.setItem("d1", JSON.stringify(D) );
+    //retrieving the length
+    A = JSON.parse(localStorage.getItem('a1'))
+    let Acount = A.length
+    B = JSON.parse(localStorage.getItem('b1'))
+    let Bcount = B.length
+    C = JSON.parse(localStorage.getItem('c1'))
+    let Ccount = C.length
+    D = JSON.parse(localStorage.getItem('d1'))
+    let Dcount = D.length
+    console.log("Array is:" + A )
+    document.getElementById("votecount").innerHTML = "Adekunle Ogunjimi: "+ Acount +"votes" +"</br>" + "Umar Kabo Idis: "+ Bcount +"votes" + "</br>" + "Razak Owolabi: "+ Ccount +"votes" +"</br>"+ "Agoro Moshood: "+ Dcount +"votes" +"</br>"
+  }
+//localStorage
+
+function mySave() {
+  var myContent = tinymce.get("myTextarea").getContent();
+  localStorage.setItem("myContent", myContent);
+}
+
+function myLoad() {
+  var myContent = localStorage.getItem("myContent");
+  tinymce.get("myTextarea").setContent(myContent);
+}
+
+
+//version 2
+function vote(){
+    var A = []; 
+    var B = []; 
+    var C = []; 
+    var D = []; 
+    var selection = document.getElementById('Chairman').value;
+    
+    //var selection = chairman.options[chairman.selectedIndex].value;  
+
+    if (selection=='candidateA'){
+      A.push(JSON.parse(JSON.stringify(n.value)));
+      //A.push(n.value)
+      //localStorage.setItem("a1", JSON.stringify(A) );
+    }else if (selection=='candidateB'){
+      B.push(JSON.parse(JSON.stringify(n.value)));
+      //B.push(n.value)
+      //localStorage.setItem("b1", JSON.stringify(B) );
+    }else if (selection=='candidateC'){
+      C.push(JSON.parse(JSON.stringify(n.value)));
+      //C.push(n.value)
+     // localStorage.setItem("c1", JSON.stringify(C) ) ;
+    }else if (selection=='candidateD'){
+      D.push(JSON.parse(JSON.stringify(n.value)));
+      // D.push(n.value)
+      //localStorage.setItem("d1", JSON.stringify(D) );
+    }
+ 
+    
+    //retrieving the length
+    //A = JSON.parse(localStorage.getItem('a1'))
+    let Acount = A.length
+    //B = JSON.parse(localStorage.getItem('b1'))
+    let Bcount = B.length
+   // C = JSON.parse(localStorage.getItem('c1'))
+    let Ccount = C.length
+    //D = JSON.parse(localStorage.getItem('d1'))
+    let Dcount = D.length
+    console.log("Array is:" + A )
+    document.getElementById("votecount").innerHTML = "Adekunle Ogunjimi: "+ Acount +"votes" +"</br>" + "Umar Kabo Idis: "+ Bcount +"votes" + "</br>" + "Razak Owolabi: "+ Ccount +"votes" +"</br>"+ "Agoro Moshood: "+ Dcount +"votes" +"</br>"
+  }

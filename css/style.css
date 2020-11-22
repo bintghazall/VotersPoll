@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+:root{
+    --primary-color:#134413;
+    --secondary-color:#987222 ;
+    --dark-color: #134413;
+    --light-color: #f4f4f4;
+    --success-color: #5cb85c;
+    --error-color: #d9534f;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url('../images/logo.jpg');
+    /*color: #fff;*/
+    color: var(--light-color);
+    font-family: 'lato', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+ul{  list-style-type: none;}
+ a{
+    text-decoration: none;
+    color:inherit;
+  }
+  
+.navbar{
+  /*background-color: var(--primary-color);*/
+  color: var(--light-color);
+  height: 50px;
+  margin-bottom: 0%;
+  padding-bottom:0%;
+  display: flex;
+  font-size: 20px;
+}
+.navbar ul {
+  display: flex;
+  justify-self: flex-end;  
+}
+.navbar a {
+  color: var(--light-color);
+  padding: 2px;
+  margin: 0 5px;
+}
+.navbar a:hover {
+  background-color: var(--primary-color);
+  border-bottom: 2px var(--primary-color) solid ;
+  border-radius: 10px;
+}
+
+.navbar .flex{
+    justify-content: space-between;
+    gap: 98px;
+    display: flex;
+}
+.sub h1 {
+  font-size: 36px;
+  font-weight: bold;    
+  margin:0;
+  text-align: center;
+  padding:5% 0%;
+}
+.sub{
+  padding: 2px 5%;
+}
+.sub h3{
+  display: inline-block;
+}
+input[list]:hover{
+  border: transparent;
+}
+input[list]{
+  border: 0%;
+  background: #f4f4f496;
+  width: 40%;
+  height: 25px;
+  padding: 5px 5px;
+  margin-left: 5px;
+}
+.buttn :active, .buttn:hover{
+  border: 0;
+  outline-offset: 0;
+}
+.buttn{
+  background: #134413;
+  padding:10px;
+  border-radius: 10px;
+  margin:10px;
+  align-self: center;
+  color: #f4f4f4;
+}
+#submt{
+  font-size: 20px;
+  margin: 10% 35%;
+  padding:3% 7%;
+}
+#token, token1{
+align-self: center;
+width: 55px;
+height: 30px;
+background:  #f4f4f496;
+padding: 10px;
+margin: 40px 30px 10px 3%;
+
+}
+.voting-poll h1{
+  text-align: center;
+  margin: 10% 0 1% 0;
+}
+label{
+  font-size: 24px;
+  padding: 5px 0;
+  
+}
+.vote select{
+  width: 50%;
+  
+  margin:0 auto;
+  font-size: 18px;
+  padding: 1%;
+  justify-self: right;
+  margin: 1% ;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  background: #f4f4f44f;
+}
+pre{
+  display: inline;
+}
+#timer{
+  color: var(--light-color);
+  font-size: 20px;
+  height: 50px;
+}
+#mainvote{
+  display:none;
+}
+
+
+
+h2{
+    margin: 10px 0;
+    text-align: center;
+    text-decoration: underline;
+
+}
+  #carrier1, #carrier2{
+    font-size: 14px;
+  }
+  .counterRow{  
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);  
+    gap: 10%;      
+    background-color: var(--dark-color);
+    color: #fff;
+    height: auto;
+    width: 500px;
+    padding:15px;
+    position: relative;
+    margin-left: -10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-sizing: border-box;
+    /*overflow: visible;*/
+  }
+  .counterRow > *:first-child {
+    grid-column: 1/span 3;
+    grid-row: 1/ span 1;
+    text-align: center;
+  }
+  .counterRow > *:nth-child(2){
+    grid-column: 1/span 3;
+    grid-row: 2/span 1;
+    text-align: center;
+  }
+  .counterRow span{
+    display: inline;
+  }
+  
+  .flex img{
+    height: 150px;
+    width: 500px;
+    justify-self: center;
+    margin: 0px;
+    flex-wrap: wrap;
+    
+  }
+  .container{
+    background-color: rgba(0, 0, 0, 0.507);
+    max-width: 500px;
+    max-height: 1000px;
+    margin: 10% 25%;
+    margin-left: 32%;
+    overflow: visible;
+    padding: 0 10px;
+    padding-top: 2%;
+    border-radius:10px;
+    align-self: center;
+    position: static;
+}
+  .flex img:hover{
+    transform: translateY(-15px);
+  }
+  /*.flex {    
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+    height: 70vh;
+  }*/
+  
+  #result {
+    color: rgba(0, 0, 0, 0.473);
+    font-size: 32px;
+    padding: 0% 2%;
+    text-align: center;
+  }
+  
+  #ans {
+    color: rgba(0, 0, 0, 0.473);
+    padding: 20px;
+    font-size: 22px;
+    background: transparent;
+    border: 0; 
+    text-align: center;
+  }
+  
+  #ans:focus {
+    outline: 0;
+    outline-offset: 0;
+  }
+
+  @media (max-width: 768px){
+    .container{      
+      margin: 5% 12.5%;
+    }
+    
+  }
+  @media (max-width: 500px){
+    .container{      
+      margin: 8% 3% 5% 3%;
+    }
+    .counterRow{
+      width: 470px;
+    }
+    .navbar .flex{
+      gap: 60px;      
+  }
+  }
